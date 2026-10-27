@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0a1020">
+  <meta name="description" content="Secure AI virtual clothing try-on with private version history.">
+  <title>YouCam VirtualStyle AI — Hackathon 2026</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="assets/app.css?v=20261027-11">
+</head>
+<body>
+  <section id="auth" class="auth-shell" aria-labelledby="authTitle">
+    <div class="auth-card">
+      <div class="logo-mark" aria-hidden="true">VS</div>
+      <div>
+        <p class="eyebrow">BAHARSOFT BD · HACKATHON 2026</p>
+        <h1 id="authTitle">Your private virtual wardrobe</h1>
+        <p id="authIntro">Sign in to keep every upload, AI result and version safely in your own gallery.</p>
+      </div>
+      <form id="authForm" autocomplete="on">
+        <label><span id="usernameLabel">Username</span><input id="username" name="username" autocomplete="username" required minlength="3" maxlength="40"></label>
+        <label><span id="passwordLabel">Password</span><input id="password" name="password" type="password" autocomplete="current-password" required minlength="10"></label>
+        <div class="button-row">
+          <button class="button primary" id="loginButton" type="submit" data-mode="login"></button>
+          <button class="button" id="registerButton" type="button"></button>
+        </div>
+        <p id="authStatus" class="status" role="status"></p>
+      </form>
+      <div class="language-row"><label for="authLanguage">Language</label><select id="authLanguage"></select></div>
+      <p class="privacy-note">Photos are private to your account, never listed publicly, and automatically removed after the configured retention period.</p>
+    </div>
+  </section>
+
+  <div id="app" class="app hidden" role="application" aria-label="VirtualStyle AI">
+    <header class="titlebar">
+      <div class="brand-block"><div class="brand"><span class="brand-icon">VS</span><span>YouCam VirtualStyle AI</span></div><div class="meta">Hackathon 2026 · <span id="dimensions">1200 × 700</span></div></div>
+      <div class="spacer"></div>
+      <div class="toolbar">
+        <div id="languageButtons" class="language-buttons" aria-label="Five languages"></div>
+        <div id="themes" class="theme-dots" aria-label="Five dark themes"></div>
+        <button class="icon-button" id="logout" title="Sign out" aria-label="Sign out"></button>
+      </div>
+      <div class="window-buttons">
+        <button class="icon-button" id="normal" title="Normal mode" aria-label="Normal mode"></button>
+        <button class="icon-button" id="maximize" title="Maximize" aria-label="Maximize"></button>
+      </div>
+    </header>
+    <div class="workspace">
+      <aside class="sidebar"><nav id="nav" class="nav" aria-label="Main navigation"></nav><div class="account"><span id="accountIcon"></span><div><strong id="accountName"></strong><small id="privateLabel"></small></div></div></aside>
+      <main><div class="page-heading"><div><p id="pageEyebrow" class="eyebrow"></p><h1 id="heading"></h1><p id="intro"></p></div><button class="button subtle" id="refreshLibrary"></button></div><section id="view" class="page"></section></main>
+    </div>
+    <footer><span>© 2026 VirtualStyle AI · Team BaharSoft BD</span><span id="footerStatus">Private gallery</span></footer>
+  </div>
+
+  <div id="dialog" class="dialog hidden" role="dialog" aria-modal="true"><div class="dialog-card"><button id="dialogClose" class="icon-button dialog-close" aria-label="Close"></button><div id="dialogBody"></div></div></div>
+<script src="assets/app.js?v=20261027-15" defer></script>
+</body>
+</html>

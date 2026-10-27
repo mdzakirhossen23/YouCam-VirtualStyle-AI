@@ -1,4 +1,4 @@
-# Keep private uploads and generated images out of GitHub
+# Private uploads, generated images, and session/user records
 /storage/*
 !/storage/.htaccess
 /youcam-config.php
