@@ -1,0 +1,10 @@
+# Keep private uploads and generated images out of GitHub
+/storage/*
+!/storage/.htaccess
+/youcam-config.php
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
